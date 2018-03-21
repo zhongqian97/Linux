@@ -1,0 +1,37 @@
+
+
+;; Added by Package.el.  This must come before configurations of
+;; installed packages.  Don't delete this line.  If you don't want it,
+;; just comment it out by adding a semicolon to the start of the line.
+;; You may delete these explanatory comments.
+(package-initialize)
+
+(tool-bar-mode -1)
+
+ ;关闭工具栏
+
+(scroll-bar-mode -1)
+
+;关闭滚动条
+
+(electric-indent-mode -1)
+
+;关闭空格跳（我也不知道叫什么好）
+
+(linum-mode t)
+
+;打开行号
+
+(setq inhibit-splash-screen t)
+
+;关闭启动画面
+
+ (defun open-my-init-file()
+   (interactive)
+   (find-file "~/.emacs"))
+
+(global-set-key (kbd "<f2>") 'open-my-init-file)
+
+;f2打开快捷键
+
+
